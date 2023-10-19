@@ -1,0 +1,44 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Capstone Suite">
+    <test name="Smoke Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="true"/>
+        <classes>
+            <class name="TestsUI.Tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Chrome Headless Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="true"/>
+        <classes>
+            <class name="TestsUI.Tests.HomepageTest"></class>
+            <class name="TestsUI.Tests.TaskTest"></class>
+        </classes>
+    </test>
+
+    <test name="Chrome Test">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="headless" value="false"/>
+        <classes>
+            <class name="TestsUI.Tests.HomepageTest"></class>
+            <class name="TestsUI.Tests.TaskTest"></class>
+        </classes>
+    </test>
+
+    <test name="Firefox Test">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="TestsUI.Tests.HomepageTest"></class>
+            <class name="TestsUI.Tests.TaskTest"></class>
+        </classes>
+    </test>
+
+    <test name="Api Tests">
+        <classes>
+            <class name="TestApi.Tests"></class>
+        </classes>
+    </test>
+
+</suite>
+
